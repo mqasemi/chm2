@@ -27,6 +27,10 @@
                 "glob": "**/*",
                 "input": "node_modules/leaflet/dist/images",
                 "output": "/assets/img/markers"
+              },{
+                "glob": "**/*",
+                "input": "src/app/Auth/components/login/assets",
+                "output": "/assets/login/"
               }
             ],
             "styles": [
@@ -39,9 +43,11 @@
               "node_modules/nebular-icons/scss/nebular-icons.scss",
               "node_modules/pace-js/templates/pace-theme-flash.tmpl.css",
               "node_modules/leaflet/dist/leaflet.css",
-              "src/app/@theme/styles/styles.scss"
+              "src/app/@theme/styles/styles.scss",
+              "node_modules/@fortawesome/fontawesome-free/css/all.min.css"
             ],
             "scripts": [
+              "node_modules/jquery/dist/jquery.min.js",
               "node_modules/pace-js/pace.min.js",
               "node_modules/tinymce/tinymce.min.js",
               "node_modules/tinymce/themes/modern/theme.min.js",

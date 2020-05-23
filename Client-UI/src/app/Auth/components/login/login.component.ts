@@ -3,9 +3,7 @@ import { NbLoginComponent } from '@nebular/auth';
 
 @Component({
   selector: 'ngx-login',
-  templateUrl: './login.component.html',
-  styleUrls: ['./css/login.component.css',
-'./css/main.css','./css/util.css']
+  templateUrl: './login.component.html'
 })
 export class LoginComponent extends NbLoginComponent  implements OnInit {
 

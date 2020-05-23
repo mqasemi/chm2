@@ -3,12 +3,23 @@ import { NbAuthComponent, NbAuthService } from '@nebular/auth';
 import {Location} from '@angular/common';
 
 @Component({
-    selector: 'auth',
-    template: `
+  selector: 'nb-auth-block',
+  styleUrls: ['./auth.component.scss'],
+  template: `
     <nb-layout>
       <nb-layout-column>
-      <router-outlet></router-outlet>
-        
+        <nb-card>
+          <nb-card-header>
+            <nav class="navigation">
+              <a href="#" (click)="back()" class="link" aria-label="Back"><i class="icon nb-arrow-thin-left"></i></a>
+            </nav>
+          </nb-card-header>
+          <nb-card-body>
+           
+              <router-outlet></router-outlet>
+           
+          </nb-card-body>
+        </nb-card>
       </nb-layout-column>
     </nb-layout>
   `,
