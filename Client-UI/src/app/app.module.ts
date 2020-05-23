@@ -71,6 +71,9 @@ const formSetting: any = {
           login:{
            endpoint: '/api/auth/login'
           },
+          logout:{
+            endpoint:''
+          },
           token: {
             class: NbAuthJWTToken,
             key:'token'

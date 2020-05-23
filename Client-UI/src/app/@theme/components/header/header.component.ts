@@ -1,11 +1,13 @@
-import { Component, OnDestroy, OnInit } from '@angular/core';
-import { NbMediaBreakpointsService, NbMenuService, NbSidebarService, NbThemeService } from '@nebular/theme';
+import { Component, OnDestroy, OnInit, Inject } from '@angular/core';
+import { NbMediaBreakpointsService, NbMenuService, NbSidebarService, NbThemeService, NB_WINDOW, NbMenuItem } from '@nebular/theme';
+import { NbAuthJWTToken, NbAuthService } from '@nebular/auth';
 
 import { UserData } from '../../../@core/data/users';
 import { LayoutService } from '../../../@core/utils';
-import { map, takeUntil } from 'rxjs/operators';
+import { map, takeUntil, filter } from 'rxjs/operators';
 import { Subject } from 'rxjs';
 import { TranslateService } from '@ngx-translate/core';
+import { TranslateHelper } from '../../../shaered-modules/service/translateHelper';
 
 @Component({
   selector: 'ngx-header',
@@ -39,23 +41,35 @@ export class HeaderComponent implements OnInit, OnDestroy {
 
   currentTheme = 'default';
 
-  userMenu = [ { title: 'Profile' }, { title: 'Log out' } ];
+  userMenu = [ { title: 'Profile' }, { title: 'logout',url:'/auth/logout'} ];
 
   constructor(private sidebarService: NbSidebarService,
               private menuService: NbMenuService,
               private themeService: NbThemeService,
               private userService: UserData,
               private layoutService: LayoutService,
-              private breakpointService: NbMediaBreakpointsService,private translate: TranslateService ) {
-                translate.use('fa');
+              private breakpointService: NbMediaBreakpointsService,private translateHelper:TranslateHelper,
+              private authService: NbAuthService ) {
+               
+                this.authService.onTokenChange()
+      .subscribe((token: NbAuthJWTToken) => {
+
+        if (token.isValid()) {
+           // here we receive a payload from the token and assigns it to our `user` variable 
+          this.user = token.getPayload();
+        }
+
+      });
+    
   }
 
   ngOnInit() {
     this.currentTheme = this.themeService.currentTheme;
+   this.translateHelper.translateMenuItems(this.userMenu);
 
-    this.userService.getUsers()
-      .pipe(takeUntil(this.destroy$))
-      .subscribe((users: any) => this.user = users.nick);
+    // this.userService.getUsers()
+    //   .pipe(takeUntil(this.destroy$))
+    //   .subscribe((users: any) => this.user = users.nick);
 
     const { xl } = this.breakpointService.getBreakpointsMap();
     this.themeService.onMediaQueryChange()

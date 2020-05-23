@@ -36,7 +36,8 @@ namespace Gateway.Controllers
             var claims = new[]
             {
                 new Claim(ClaimTypes.NameIdentifier, userFromRepo.Email.ToString()),
-                new Claim(ClaimTypes.Name, userFromRepo.Email)
+                new Claim(ClaimTypes.Name, userFromRepo.Email),
+                  new Claim("name", userFromRepo.Email)
             };
 
             var key = new SymmetricSecurityKey(Encoding.UTF8.GetBytes(_config.GetSection("AppSettings:Token").Value));

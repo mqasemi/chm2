@@ -1,5 +1,5 @@
 import { NgModule } from '@angular/core';
-import { NbMenuModule } from '@nebular/theme';
+import { NbMenuModule, NbUserModule } from '@nebular/theme';
 
 import { ThemeModule } from '../@theme/theme.module';
 import { PagesComponent } from './pages.component';
@@ -19,6 +19,7 @@ import { SharedModule } from '../shaered-modules/shared.module';
     ECommerceModule,
     MiscellaneousModule,
     SharedModule,
+    NbUserModule
   ],
   declarations: [
     PagesComponent
