@@ -1,5 +1,19 @@
 {
     "dashboard":"داشبورد",
     "logo":"بانک کشاورزی",
-    "logout":"خروج"
+    "logout":"خروج",
+    
+    "login":{
+        "remember-me":"مرابه خاطر بسپار",
+        "header":"ورود به سیستم",
+        "btn":{
+            "login":"ورود"
+        },
+    "username-invalid":"نام کاربری معتبر نمی باشد",
+    "password-invalid":"کلمه عبور معتبرنمی باشد",
+    "username":"نام کاربری",
+    "password": "کلمه عبور",
+    "username-is-required":"نام کاربری وارد نشده است",
+    "Password-is-required":"کلمه عبور وارد نشده است"
+    }
 }

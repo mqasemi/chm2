@@ -1,8 +1,12 @@
 @import '../../../node_modules/@nebular/theme/styles/global/breakpoints';
+@import '~@nebular/theme/styles/theming';
 
 :host {
   $auth-layout-padding: 2.5rem;
 
+  .layout-column1{
+    padding: 0 !important;
+  }
   nb-card {
     margin: 0;
     height: calc(100vh - 2 * #{$auth-layout-padding});
@@ -34,7 +38,7 @@
 
   /deep/ {
     nb-layout .layout .layout-container .content .columns nb-layout-column {
-      padding: $auth-layout-padding;
+      
 
       @include media-breakpoint-down(sm) {
         padding: 0;
