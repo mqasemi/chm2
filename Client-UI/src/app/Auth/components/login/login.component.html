@@ -110,21 +110,24 @@
 		<div class="container-login100">
 			<div class="wrap-login100 p-l-50 p-r-50 p-t-77 p-b-30">
         <nb-alert *ngIf="showMessages.error && errors?.length && !submitted" outline="danger" role="alert">
-          <p class="alert-title"><b>Oh snap!</b></p>
+          <p class="alert-title"><b>{{'Oh-snap'|translate}}</b></p>
           <ul class="alert-message-list">
-            <li *ngFor="let error of errors" class="alert-message">{{ error }}</li>
+            <li *ngFor="let error of errors" class="alert-message">{{ 'login.'+error| translate }}</li>
           </ul>
         </nb-alert>
         
         <nb-alert *ngIf="showMessages.success && messages?.length && !submitted" outline="success" role="alert">
-          <p class="alert-title"><b>Hooray!</b></p>
+          <p class="alert-title"><b>{{'Hooray'| translate}}</b></p>
           <ul class="alert-message-list">
-            <li *ngFor="let message of messages" class="alert-message">{{ message }}</li>
+            <li *ngFor="let message of messages" class="alert-message">{{ 'login.'+message|translate }}</li>
           </ul>
         </nb-alert>
 				<form class="login100-form validate-form" (ngSubmit)="login()" #form="ngForm">
 					<span id="title" class="login100-form-title p-b-55">
-          {{"login.header"|translate}}
+            <img class="logo" src="assets/Agri-bank_logo.png">
+            <br>
+          {{"login.header"|translate}}<br>
+          <span style="color: #28a745;"> {{"logo"|translate}}</span>
 					</span>
 
 					<div  attr.data-validate="{{'login.username-invalid'|translate}}" class="wrap-input100 validate-input m-b-16"   >
@@ -190,17 +193,22 @@
 					</div>
 					
 					<div class="container-login100-form-btn p-t-25">
-						<button class="login100-form-btn" [disabled]="submitted || !form.valid"
+						<button class="login100-form-btn" [disabled]="submitted "
             [class.btn-pulse]="submitted">
             {{"login.btn.login"|translate}}
 						</button>
 					</div>
+          <div class="container-login100-form-btn p-t-25">
 
-				
+            <small class="copy-right">© تمامی حقوق این سایت متعلق به بانک کشاورزی ایران می باشد.</small>
+          </div>
+
+       
 
 				
 				</form>
-			</div>
+      </div>
+   
 		</div>
   </div>
  <div id="scripts">

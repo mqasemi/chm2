@@ -5,41 +5,6 @@
 /*//////////////////////////////////////////////////////////////////
 [ FONT ]*/
 
-@font-face {
-  font-family: Poppins-Regular;
-  src: url('../fonts/poppins/Poppins-Regular.ttf'); 
-}
-
-@font-face {
-  font-family: Poppins-Bold;
-  src: url('../fonts/poppins/Poppins-Bold.ttf'); 
-}
-
-@font-face {
-  font-family: Poppins-Medium;
-  src: url('../fonts/poppins/Poppins-Medium.ttf'); 
-}
-
-@font-face {
-  font-family: Raleway-Regular;
-  src: url('../fonts/raleway/Raleway-Regular.ttf'); 
-}
-
-@font-face {
-  font-family: Raleway-Black;
-  src: url('../fonts/raleway/Raleway-Black.ttf'); 
-}
-
-@font-face {
-  font-family: Raleway-SemiBold;
-  src: url('../fonts/raleway/Raleway-SemiBold.ttf'); 
-}
-
-@font-face {
-  font-family: Raleway-Bold;
-  src: url('../fonts/raleway/Raleway-Bold.ttf'); 
-}
-
 
 /*//////////////////////////////////////////////////////////////////
 [ RESTYLE TAG ]*/
@@ -52,12 +17,12 @@
 
 body, html {
 	height: 100%;
-	font-family: Poppins-Regular, sans-serif;
+	font-family: "iran-sans", sans-serif;
 }
 
 /*---------------------------------------------*/
 a {
-	font-family: Poppins-Regular;
+	font-family: "iran-sans";
 	font-size: 14px;
 	line-height: 1.7;
 	color: #666666;
@@ -83,7 +48,7 @@ h1,h2,h3,h4,h5,h6 {
 }
 
 p {
-	font-family: Poppins-Regular;
+	font-family: "iran-sans";
 	font-size: 14px;
 	line-height: 1.7;
 	color: #666666;
@@ -150,7 +115,7 @@ iframe {
 /*//////////////////////////////////////////////////////////////////
 [ Utility ]*/
 .txt1 {
-  font-family: Raleway-Regular;
+  font-family: "iran-sans";
   font-size: 16px;
   color: #999999;
   line-height: 1.4;
@@ -185,11 +150,8 @@ iframe {
   justify-content: center;
   align-items: center;
   padding: 15px;
-  background: #0250c5;
-  background: -webkit-linear-gradient(bottom, #0250c5, #d43f8d);
-  background: -o-linear-gradient(bottom, #0250c5, #d43f8d);
-  background: -moz-linear-gradient(bottom, #0250c5, #d43f8d);
-  background: linear-gradient(bottom, #0250c5, #d43f8d);
+  background: #f5f5f5;
+  
   position: relative;
   z-index: 1;
 }
@@ -232,8 +194,8 @@ iframe {
 }
 
 .login100-form-title {
-  font-family: Raleway-Black;
-  font-size: 30px;
+  font-family: "iran-sansbold";
+  font-size: 1.3rem;
   color: #333333;
   line-height: 1.2;
   text-transform: uppercase;
@@ -252,7 +214,7 @@ iframe {
 }
 
 .input100 {
-  font-family: Raleway-SemiBold;
+  font-family: "iran-sansbold";
   font-size: 18px;
   line-height: 1.2;
   color: #686868;
@@ -339,7 +301,7 @@ iframe {
 }
 
 .label-checkbox100 {
-  font-family: Raleway-Regular;
+  font-family: "iran-sans";
   font-size: 16px;
   color: #999999;
   line-height: 1.2;
@@ -369,7 +331,7 @@ iframe {
   height: 18px;
   border-radius: 3px;
   background: #fff;
-  border: 2px solid #d33f8d;
+  border: 2px solid #1c7430;
   right: 0;
   top: 48%;
   -webkit-transform: translateY(-50%);
@@ -383,7 +345,14 @@ iframe {
   color: #d33f8d;
 }
 
+.logo{
+  width: 34%;
+  padding: 0.7rem;
+}
 
+.copy-right{
+  font-family: "iran-sans";
+}
 /*------------------------------------------------------------------
 [ Button ]*/
 .container-login100-form-btn {
@@ -398,7 +367,7 @@ iframe {
 }
 
 .login100-form-btn {
-  font-family: Raleway-Bold;
+  font-family:"iran-sansbold";
   font-size: 16px;
   line-height: 1.5;
   color: #fff;
@@ -407,7 +376,7 @@ iframe {
   width: 100%;
   height: 62px;
   border-radius: 3px;
-  background: #d33f8d;
+  background: #1e7e34;
   display: -webkit-box;
   display: -webkit-flex;
   display: -moz-box;
@@ -431,7 +400,7 @@ iframe {
 [ Button sign in with ]*/
 .btn-face,
 .btn-google {
-  font-family: Raleway-Bold;
+  font-family: "iran-sansbold";
   font-size: 16px;
   line-height: 1.2;
 
@@ -507,7 +476,7 @@ iframe {
   left: 8px;
   pointer-events: none;
 
-  font-family: Raleway-SemiBold;
+  font-family: "iran-sansbold";
   color: #c80000;
   font-size: 13px;
   line-height: 1.4;

@@ -1,9 +1,14 @@
 <div class="header-container">
+  <a (click)="toggleSidebar()" href="#" class="sidebar-toggle">
+    <nb-icon icon="menu-2-outline"></nb-icon>
+  </a>
   <div class="logo-container">
-    <a (click)="toggleSidebar()" href="#" class="sidebar-toggle">
-      <nb-icon icon="menu-2-outline"></nb-icon>
-    </a>
-    <a class="logo" href="#" (click)="navigateHome()"><span>{{'logo'|translate}}</span></a>
+    
+    <img class="logo" src="assets/Agri-bank_logo.png" style="
+    width: 37%;
+">
+    <a class="logo" href="#" (click)="navigateHome()"> {{"login.header"|translate}}
+      <span style="color: #28a745;"> {{"logo"|translate}}</span></a>
   </div>
   <!-- <nb-select [selected]="currentTheme" (selectedChange)="changeTheme($event)" status="primary">
     <nb-option *ngFor="let theme of themes" [value]="theme.value"> {{ theme.name }}</nb-option>

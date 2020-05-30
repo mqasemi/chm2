@@ -1,4 +1,4 @@
-import { Component, OnInit, Input } from '@angular/core';
+import { Component, OnInit, Input, ViewChild, ElementRef, AfterViewInit } from '@angular/core';
 import { NbLoginComponent } from '@nebular/auth';
 import jquery from 'jquery';
 
@@ -9,9 +9,14 @@ import jquery from 'jquery';
 './assets/css/main.css',
 './assets/fonts/font-awesome-4.7.0/css/font-awesome.min.css']
 })
-export class LoginComponent extends NbLoginComponent  implements OnInit {
+export class LoginComponent extends NbLoginComponent  implements OnInit,AfterViewInit {
+  ngAfterViewInit(): void {
+  }
 
+  @ViewChild('email',{static:false}) emailField;
+  @ViewChild('password',{static:false}) passwordField;
   ngOnInit() {
+ 
 // const script = document.createElement('script');
 // script.src = 'authloginmainjs.js';
 // script.type = 'text/javascript';
@@ -20,5 +25,4 @@ export class LoginComponent extends NbLoginComponent  implements OnInit {
 // jquery('#scripts').append(script);
   }
  
-
 }

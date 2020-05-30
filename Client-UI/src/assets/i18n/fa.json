@@ -1,11 +1,13 @@
 {
     "dashboard":"داشبورد",
+    "copy-right":"© تمامی حقوق این سایت متعلق به بانک کشاورزی ایران می باشد.",
     "logo":"بانک کشاورزی",
     "logout":"خروج",
-    
+    "Oh-snap":"به خطاهای زیر توجه کنید!!!",
+    "Hooray":"عملیات موفق",
     "login":{
         "remember-me":"مرابه خاطر بسپار",
-        "header":"ورود به سیستم",
+        "header":"سامانه مدیریت سرویس های نرم افزاری ",
         "btn":{
             "login":"ورود"
         },
@@ -14,6 +16,8 @@
     "username":"نام کاربری",
     "password": "کلمه عبور",
     "username-is-required":"نام کاربری وارد نشده است",
-    "Password-is-required":"کلمه عبور وارد نشده است"
+    "Password-is-required":"کلمه عبور وارد نشده است",
+    "Login/Email combination is not correct, please try again.":"نام کاربری یا کلمه عبور اشتباه می باشد",
+    "You have been successfully logged in.":"شما با موفقیت وارد شدید"
     }
 }
