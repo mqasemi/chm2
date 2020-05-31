@@ -5,7 +5,7 @@ import { TranslateHelper } from '../../../shaered-modules/service/translateHelpe
   selector: 'ngx-footer',
   styleUrls: ['./footer.component.scss'],
   template: `
-    <span class="created-by">
+    <span class="created-by logo d-none d-sm-block">
      {{'copy-right'|translate}} <b><a href="https://bki.ir" target="_blank">{{'logo'|translate}}</a></b> 2019
     </span>
     <!-- <div class="socials">
